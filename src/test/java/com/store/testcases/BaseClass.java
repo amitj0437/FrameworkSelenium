@@ -2,6 +2,8 @@ package com.store.testcases;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
@@ -17,6 +19,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
@@ -31,9 +34,11 @@ public class BaseClass {
 	ReadConfig readConfig = new ReadConfig();
 	String url = readConfig.getBaseURL();
 	String browser = readConfig.getBrowser();
-
+//	boolean grid = readConfig.getGrid();
+//	String gridURL = readConfig.gridURL();
+	
 	@BeforeClass
-	public void setUp() {
+	public void setUp() throws MalformedURLException {
 
 		switch (browser.toLowerCase()) {
 		case "chrome":
@@ -42,12 +47,14 @@ public class BaseClass {
 			opt.addArguments("--headless=new");
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver(opt);
+//			driver = new RemoteWebDriver(new URL(gridURL), opt);
 			break;
 		case "firefox":
 			FirefoxOptions opt1 = new FirefoxOptions();
 			opt1.addArguments("--headless=new");
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver(opt1);
+//			driver = new RemoteWebDriver(new URL(gridURL), opt1);
 			break;
 		case "msedge":
 			WebDriverManager.edgedriver().setup();

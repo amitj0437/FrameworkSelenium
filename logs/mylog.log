@@ -112,3 +112,9 @@
 [INFO ] 2025-12-27 11:39:52.697 [main] MyStoreV1 - Password entered.........
 [INFO ] 2025-12-27 11:39:53.915 [main] MyStoreV1 - Submit successfully
 [INFO ] 2025-12-27 11:39:53.985 [main] MyStoreV1 - Verify login - Passed
+[INFO ] 2025-12-27 14:42:53.960 [main] MyStoreV1 - Url opened
+[INFO ] 2025-12-27 14:42:55.143 [main] MyStoreV1 - Clicked on sign in link
+[INFO ] 2025-12-27 14:42:55.195 [main] MyStoreV1 - Email entered...........
+[INFO ] 2025-12-27 14:42:55.234 [main] MyStoreV1 - Password entered.........
+[INFO ] 2025-12-27 14:42:56.250 [main] MyStoreV1 - Submit successfully
+[INFO ] 2025-12-27 14:42:56.278 [main] MyStoreV1 - Verify login - Passed

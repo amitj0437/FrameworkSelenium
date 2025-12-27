@@ -17,7 +17,7 @@ public class TC_MyAccountPageTest extends BaseClass {
 
 //		driver.get(url);
 //		logger.info("Url opened");
-
+	//	this
 		IndexPage idx = new IndexPage(driver);
 		idx.clickOnSignInBtn();
 		logger.info("Clicked on sign in link");

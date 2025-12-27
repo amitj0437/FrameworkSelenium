@@ -9,6 +9,9 @@ public class ReadConfig {
 	Properties prop;
 	String pathOfFile = "C:\\Users\\amitj\\OneDrive\\Desktop\\Demo_Test\\com.store.v1\\Configuration\\config.properties";
 	
+	
+	
+	
 	public ReadConfig(){
 		try {
 			prop = new Properties();
@@ -39,6 +42,18 @@ public class ReadConfig {
 			throw new RuntimeException("Browser not specified in config file.");
 		}
 	}
+	
+	//get seleniumGrid
+	/*public boolean getGrid() {
+		boolean seleniumGrid = Boolean.parseBoolean(prop.getProperty("seleniumGrid"));
+		return seleniumGrid;
+	}*/
+	
+	//get gridURL
+	/*public String gridURL() {
+		String gridURL = prop.getProperty("gridURL");
+		return gridURL;
+	}*/
 	
 	
 
