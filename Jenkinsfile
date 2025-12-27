@@ -1,4 +1,3 @@
-#pipeline demo 
 
 pipeline {
     agent any  
