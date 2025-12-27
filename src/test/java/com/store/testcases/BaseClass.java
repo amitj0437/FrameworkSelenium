@@ -13,8 +13,10 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
@@ -35,12 +37,16 @@ public class BaseClass {
 
 		switch (browser.toLowerCase()) {
 		case "chrome":
+			ChromeOptions opt = new ChromeOptions();
+			opt.addArguments("--headless=new");
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			driver = new ChromeDriver(opt);
 			break;
 		case "firefox":
+			FirefoxOptions opt1 = new FirefoxOptions();
+			opt1.addArguments("--headless=new");
 			WebDriverManager.firefoxdriver().setup();
-			driver = new FirefoxDriver();
+			driver = new FirefoxDriver(opt1);
 			break;
 		case "msedge":
 			WebDriverManager.edgedriver().setup();
