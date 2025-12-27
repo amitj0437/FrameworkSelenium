@@ -37,6 +37,7 @@ public class BaseClass {
 
 		switch (browser.toLowerCase()) {
 		case "chrome":
+			//chromeoptions class
 			ChromeOptions opt = new ChromeOptions();
 			opt.addArguments("--headless=new");
 			WebDriverManager.chromedriver().setup();
